@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="intro-on">
 <head>
-<!-- Google tag (Google Analytics, stream "Website") -->
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PTFXCNRN"></script>
+<!-- Consent first: analytics stays off until the visitor accepts (Google Consent Mode). -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  var biConsent = null; try { biConsent = localStorage.getItem('bi-consent'); } catch (e) {}
+  gtag('consent', 'default', {
+    analytics_storage: biConsent === 'granted' ? 'granted' : 'denied',
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+  });
   gtag('js', new Date());
 </script>
+<!-- Google tag (Google Analytics, stream "Website") -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PTFXCNRN"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Beširević Interactive</title>
@@ -51,6 +57,19 @@ footer{background:#161617;border-top:1px solid #424245}
 .foot a{text-decoration:none}
 .foot a:hover{color:#fff}
 @media (max-width:600px){.foot{flex-direction:column;align-items:center;text-align:center} .foot .links{justify-content:center}}
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:#d2d2d7;cursor:pointer}
+.linkbtn:hover{color:#fff}
+
+/* cookie consent */
+#consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:720px;margin:0 auto;background:rgba(22,22,23,.94);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border:1px solid #424245;border-radius:18px;padding:16px 20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;font-size:14px;line-height:1.45;color:#d2d2d7}
+#consent[hidden]{display:none}
+#consent p{margin:0;flex:1 1 320px}
+#consent .actions{display:flex;gap:10px}
+#consent button{font:inherit;font-size:14px;font-weight:500;min-height:40px;padding:8px 18px;border-radius:980px;cursor:pointer;border:1px solid #424245;background:transparent;color:#f5f5f7}
+#consent button.accept{background:#BD102A;border-color:#BD102A;color:#fff}
+#consent button.accept:hover{background:#d4142f}
+#consent button:not(.accept):hover{border-color:#86868b}
+#consent button:focus-visible{outline:2px solid #f5f5f7;outline-offset:3px}
 
 /* intro */
 #intro{position:fixed;inset:0;z-index:100;background:#000;display:flex;align-items:center;justify-content:center;cursor:pointer}
@@ -92,8 +111,40 @@ html.intro-on main, html.intro-on footer, html.intro-on header{opacity:0}
 <div class="links">
 <span>Press &amp; business: <a href="mailto:hello@besirevicinteractive.com">hello@besirevicinteractive.com</a></span>
 <a href="https://x.com/BesirevicGames" rel="noopener">X · @BesirevicGames</a>
+<a href="privacy.html">Privacy</a>
+<button type="button" class="linkbtn" id="cookieSettings">Cookie settings</button>
 </div>
 </div></footer>
+<div id="consent" role="region" aria-label="Cookie consent" hidden>
+<p>We use Google Analytics cookies to count visits and see how the site is used. They're only set if you accept. <a href="privacy.html">Privacy policy</a></p>
+<div class="actions"><button type="button" id="consentDecline">Decline</button><button type="button" class="accept" id="consentAccept">Accept</button></div>
+</div>
+<script>
+(function(){
+  var box = document.getElementById('consent');
+  function save(v){ try { localStorage.setItem('bi-consent', v); } catch (e) {} }
+  function choose(v){
+    save(v);
+    gtag('consent', 'update', { analytics_storage: v });
+    box.hidden = true;
+  }
+  document.getElementById('consentAccept').addEventListener('click', function(){ choose('granted'); });
+  document.getElementById('consentDecline').addEventListener('click', function(){
+    choose('denied');
+    // remove analytics cookies left from an earlier "Accept"
+    document.cookie.split(';').forEach(function(c){
+      var n = c.split('=')[0].trim();
+      if (n.indexOf('_ga') === 0) {
+        ['', '; domain=' + location.hostname, '; domain=.' + location.hostname.replace(/^www\./, '')].forEach(function(d){
+          document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
+        });
+      }
+    });
+  });
+  document.getElementById('cookieSettings').addEventListener('click', function(){ box.hidden = false; });
+  if (biConsent !== 'granted' && biConsent !== 'denied') box.hidden = false;
+})();
+</script>
 <script>
 (function(){
   var root=document.documentElement;
