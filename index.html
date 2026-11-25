@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="intro-on">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beširević Interactive</title>
+<meta name="description" content="Beširević Interactive is an independent game studio. Now developing Eight16.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Beširević Interactive">
+<meta property="og:description" content="Independent game studio. Now developing Eight16.">
+<meta property="og:url" content="https://besirevicinteractive.com/">
+<meta property="og:image" content="https://besirevicinteractive.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@BesirevicGames">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#000;color:#f5f5f7}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.5;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+a{color:#d2d2d7}
+a:focus-visible{outline:2px solid #f5f5f7;outline-offset:4px;border-radius:4px}
+header{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.72);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid #424245}
+.bar{max-width:1080px;margin:0 auto;padding:clamp(12px,3vw,18px) 24px;min-height:clamp(64px,16vw,88px);display:flex;align-items:center}
+.brand{display:block;height:clamp(36px,9vw,52px);width:auto;max-width:100%}
+main{flex:1;display:flex;align-items:center;justify-content:center}
+.hero{max-width:1080px;width:100%;margin:0 auto;padding:clamp(72px,14vw,160px) 24px clamp(88px,16vw,176px);display:flex;flex-direction:column;align-items:center;gap:clamp(20px,4vw,28px);text-align:center}
+.label{margin:0;font-size:clamp(11px,3vw,13px);font-weight:600;letter-spacing:clamp(.1em,.5vw,.2em);line-height:1.6;text-transform:uppercase;color:#a1a1a6}
+.game{margin:0;width:100%;max-width:560px;line-height:0}
+.game img{display:block;width:100%;height:auto}
+.taglines{margin-top:12px;display:flex;flex-direction:column;align-items:center;gap:8px;max-width:100%}
+.tagline{margin:0;font-size:clamp(19px,5vw,24px);font-weight:500;line-height:1.3;letter-spacing:-.01em;text-wrap:balance}
+.subline{margin:0;font-size:clamp(15px,4vw,17px);font-weight:400;line-height:1.45;color:#a1a1a6;text-wrap:balance}
+.nowrap{white-space:nowrap}
+.cta{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:12px}
+.btn{display:inline-block;text-decoration:none;background:#BD102A;color:#fff;padding:13px 24px;min-height:48px;border-radius:980px;font-size:16px;font-weight:500;transition:background .15s}
+.btn:hover{background:#d4142f}
+.note{margin:0;font-size:14px;color:#a1a1a6}
+footer{background:#161617;border-top:1px solid #424245}
+.foot{max-width:1080px;margin:0 auto;padding:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;font-size:12px;color:#a1a1a6}
+.foot .links{display:flex;flex-wrap:wrap;gap:12px 24px}
+.foot a{text-decoration:none}
+.foot a:hover{color:#fff}
+@media (max-width:600px){.foot{flex-direction:column;align-items:center;text-align:center} .foot .links{justify-content:center}}
+
+/* intro */
+#intro{position:fixed;inset:0;z-index:100;background:#000;display:flex;align-items:center;justify-content:center;cursor:pointer}
+#intro svg{width:min(82vw,820px);height:auto;overflow:visible;transform-origin:0 0}
+#intro .scan{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.4) 0 1px,transparent 1px 3px);opacity:0}
+html.intro-on header .brand{opacity:0}
+html.intro-on main, html.intro-on footer, html.intro-on header{opacity:0}
+.reveal{transition:opacity .7s ease}
+</style>
+</head>
+<body>
+<div id="intro" aria-hidden="true">
+<div class="scan"></div>
+<svg id="introLogo" viewBox="40 40 1278 240">
+<g id="ighost"><path id="gR" fill="#ff2a4a" opacity="0"/><path id="gC" fill="#2ae6ff" opacity="0"/></g>
+<g id="iletters"></g>
+<path id="iinter" fill="#f5f5f7" fill-rule="evenodd" opacity="0" d="M40,239 52,239 52,279 40,279Z M136.6,239 147.6,239 176.6,265 176.6,239 187.6,239 187.6,279 176.6,279 147.6,253 147.6,279 136.6,279Z M268.2,239 315.2,239 315.2,248 297.2,248 297.2,279 286.2,279 286.2,248 268.2,248Z M396.8,239 440.8,239 440.8,248 407.8,248 407.8,254 435.8,254 435.8,263 407.8,263 407.8,270 440.8,270 440.8,279 396.8,279Z M523.4,239 554.4,239 554.4,239.0 555.79,239.05 557.18,239.2 558.54,239.44 559.87,239.78 561.16,240.22 562.4,240.74 563.58,241.35 564.68,242.04 565.71,242.81 566.66,243.64 567.51,244.54 568.26,245.5 568.9,246.51 569.44,247.55 569.85,248.64 570.16,249.74 570.34,250.87 570.4,252.0 570.34,253.13 570.16,254.26 569.85,255.36 569.44,256.45 568.9,257.49 568.26,258.5 567.51,259.46 566.66,260.36 565.71,261.19 564.68,261.96 563.58,262.65 562.4,263.26 561.16,263.78 559.87,264.22 558.54,264.56 572.4,279 558.4,279 546.4,265 534.4,265 534.4,279 523.4,279Z M534.4,248 552.4,248 553.01,248.02 553.62,248.06 554.21,248.14 554.79,248.24 555.36,248.37 555.9,248.54 556.42,248.72 556.9,248.94 557.35,249.17 557.76,249.43 558.13,249.71 558.46,250.0 558.74,250.31 558.98,250.63 559.16,250.96 559.29,251.31 559.37,251.65 559.4,252.0 559.37,252.35 559.29,252.69 559.16,253.04 558.98,253.37 558.74,253.69 558.46,254.0 558.13,254.29 557.76,254.57 557.35,254.83 556.9,255.06 556.42,255.28 555.9,255.46 555.36,255.63 554.79,255.76 554.21,255.86 553.62,255.94 553.01,255.98 552.4,256.0 534.4,256Z M650,279 673,239 685,239 708,279 695,279 691,272 667,272 663,279Z M672,264 679,251 686,264Z M833.96,271.64 833.05,272.5 832.08,273.32 831.05,274.11 829.97,274.85 828.84,275.55 827.66,276.2 826.44,276.81 825.17,277.37 823.87,277.87 822.54,278.33 821.18,278.73 819.79,279.08 818.37,279.38 816.94,279.61 815.5,279.8 814.04,279.92 812.58,279.99 811.11,280.0 809.65,279.95 808.19,279.84 806.74,279.68 805.3,279.46 803.88,279.19 802.48,278.86 801.11,278.47 799.77,278.03 798.45,277.54 797.18,277.0 795.94,276.41 794.75,275.77 793.6,275.09 792.5,274.36 791.46,273.59 790.47,272.78 789.54,271.93 788.66,271.05 787.85,270.13 787.11,269.18 786.43,268.21 785.83,267.21 785.29,266.18 784.82,265.14 784.43,264.08 784.11,263.01 783.87,261.92 783.71,260.83 783.62,259.73 783.6,258.63 783.67,257.54 783.81,256.44 784.03,255.35 784.32,254.28 784.68,253.21 785.13,252.16 785.64,251.13 786.22,250.13 786.88,249.14 787.6,248.18 788.39,247.26 789.24,246.36 790.15,245.5 791.12,244.68 792.15,243.89 793.23,243.15 794.36,242.45 795.54,241.8 796.76,241.19 798.03,240.63 799.33,240.13 800.66,239.67 802.02,239.27 803.41,238.92 804.83,238.62 806.26,238.39 807.7,238.2 809.16,238.08 810.62,238.01 812.09,238.0 813.55,238.05 815.01,238.16 816.46,238.32 817.9,238.54 819.32,238.81 820.72,239.14 822.09,239.53 823.43,239.97 824.75,240.46 826.02,241.0 827.26,241.59 828.45,242.23 829.6,242.91 830.7,243.64 831.74,244.41 832.73,245.22 833.66,246.07 825.18,251.78 824.62,251.29 824.03,250.82 823.41,250.37 822.75,249.94 822.07,249.54 821.35,249.17 820.61,248.82 819.84,248.5 819.05,248.21 818.24,247.95 817.41,247.72 816.57,247.52 815.71,247.36 814.84,247.22 813.97,247.12 813.08,247.05 812.19,247.01 811.3,247.0 810.41,247.03 809.53,247.09 808.65,247.18 807.78,247.31 806.91,247.46 806.07,247.65 805.23,247.87 804.42,248.12 803.62,248.4 802.84,248.71 802.09,249.05 801.37,249.42 800.67,249.81 800.01,250.22 799.37,250.66 798.77,251.13 798.2,251.61 797.67,252.12 797.18,252.64 796.73,253.18 796.32,253.74 795.95,254.31 795.63,254.9 795.34,255.49 795.1,256.1 794.91,256.71 794.77,257.33 794.66,257.95 794.61,258.58 794.6,259.21 794.64,259.84 794.73,260.46 794.86,261.08 795.04,261.7 795.26,262.31 795.53,262.91 795.84,263.5 796.19,264.07 796.59,264.63 797.03,265.18 797.51,265.71 798.02,266.22 798.58,266.71 799.17,267.18 799.79,267.63 800.45,268.06 801.13,268.46 801.85,268.83 802.59,269.18 803.36,269.5 804.15,269.79 804.96,270.05 805.79,270.28 806.63,270.48 807.49,270.64 808.36,270.78 809.23,270.88 810.12,270.95 811.01,270.99 811.9,271.0 812.79,270.97 813.67,270.91 814.55,270.82 815.42,270.69 816.29,270.54 817.13,270.35 817.97,270.13 818.78,269.88 819.58,269.6 820.36,269.29 821.11,268.95 821.83,268.58 822.53,268.19 823.19,267.78 823.83,267.34 824.43,266.87 825,266.39Z M913.2,239 960.2,239 960.2,248 942.2,248 942.2,279 931.2,279 931.2,248 913.2,248Z M1045.8,239 1057.8,239 1057.8,279 1045.8,279Z M1136.4,239 1149.4,239 1164.4,267 1179.4,239 1192.4,239 1170.4,279 1158.4,279Z M1274,239 1318,239 1318,248 1285,248 1285,254 1313,254 1313,263 1285,263 1285,270 1318,270 1318,279 1274,279Z"/>
+<path id="ihacek" fill="#BD102A" opacity="0" d="M405,43 441,43 460,61 479,43 515,43 472.5,79 447.5,79Z"/>
+<path id="iacute" fill="#BD102A" opacity="0" d="M1219,77 1251,40 1289,40 1246,77Z"/>
+</svg>
+</div>
+<header><div class="bar"><a href="/" aria-label="Beširević Interactive home"><svg class="brand" viewBox="40 40 1278 240" role="img" aria-label="Beširević Interactive"><path fill="#f5f5f7" fill-rule="evenodd" d="M40,115 70,85 186,85 212,111 212,136 196,152 212,168 212,193 186,219 40,219Z M86,123 89,120 158,120 164,126 164,130 158,136 89,136 86,133Z M86,171 89,168 158,168 164,174 164,178 158,184 89,184 86,181Z M225,115 255,85 375,85 345,120 275,120 272,123 272,133 275,136 361,136 333.5,168 275,168 272,171 272,181 275,184 370,184 370,219 251,219 225,193Z M375,115 405,85 535,85 505,120 425,120 421,124 421,132 425,136 508,136 535,163 535,192 508,219 375,219 405,184 485,184 489,180 489,172 485,168 403,168 375,140Z M546,85 589,85 589,219 546,219Z M600,85 724,85 759,120 759,147 726,180 771,219 709,219 664,180 645,180 645,219 600,219Z M645,120 706,120 713,127 713,137 706,144 645,144Z M772,115 802,85 918,85 888,120 822,120 819,123 819,133 822,136 908,136 880.5,168 822,168 819,171 819,181 822,184 917,184 917,219 798,219 772,193Z M924,85 969,85 1015.5,176 1062,85 1107,85 1041,219 990,219Z M1112,85 1153,85 1153,219 1112,219Z M1164,121 1200,85 1318,85 1288,120 1221,120 1209,132 1209,170 1221,182 1290,182 1318,219 1197,219 1164,186Z M40,239 52,239 52,279 40,279Z M136.6,239 147.6,239 176.6,265 176.6,239 187.6,239 187.6,279 176.6,279 147.6,253 147.6,279 136.6,279Z M268.2,239 315.2,239 315.2,248 297.2,248 297.2,279 286.2,279 286.2,248 268.2,248Z M396.8,239 440.8,239 440.8,248 407.8,248 407.8,254 435.8,254 435.8,263 407.8,263 407.8,270 440.8,270 440.8,279 396.8,279Z M523.4,239 554.4,239 554.4,239.0 555.79,239.05 557.18,239.2 558.54,239.44 559.87,239.78 561.16,240.22 562.4,240.74 563.58,241.35 564.68,242.04 565.71,242.81 566.66,243.64 567.51,244.54 568.26,245.5 568.9,246.51 569.44,247.55 569.85,248.64 570.16,249.74 570.34,250.87 570.4,252.0 570.34,253.13 570.16,254.26 569.85,255.36 569.44,256.45 568.9,257.49 568.26,258.5 567.51,259.46 566.66,260.36 565.71,261.19 564.68,261.96 563.58,262.65 562.4,263.26 561.16,263.78 559.87,264.22 558.54,264.56 572.4,279 558.4,279 546.4,265 534.4,265 534.4,279 523.4,279Z M534.4,248 552.4,248 553.01,248.02 553.62,248.06 554.21,248.14 554.79,248.24 555.36,248.37 555.9,248.54 556.42,248.72 556.9,248.94 557.35,249.17 557.76,249.43 558.13,249.71 558.46,250.0 558.74,250.31 558.98,250.63 559.16,250.96 559.29,251.31 559.37,251.65 559.4,252.0 559.37,252.35 559.29,252.69 559.16,253.04 558.98,253.37 558.74,253.69 558.46,254.0 558.13,254.29 557.76,254.57 557.35,254.83 556.9,255.06 556.42,255.28 555.9,255.46 555.36,255.63 554.79,255.76 554.21,255.86 553.62,255.94 553.01,255.98 552.4,256.0 534.4,256Z M650,279 673,239 685,239 708,279 695,279 691,272 667,272 663,279Z M672,264 679,251 686,264Z M833.96,271.64 833.05,272.5 832.08,273.32 831.05,274.11 829.97,274.85 828.84,275.55 827.66,276.2 826.44,276.81 825.17,277.37 823.87,277.87 822.54,278.33 821.18,278.73 819.79,279.08 818.37,279.38 816.94,279.61 815.5,279.8 814.04,279.92 812.58,279.99 811.11,280.0 809.65,279.95 808.19,279.84 806.74,279.68 805.3,279.46 803.88,279.19 802.48,278.86 801.11,278.47 799.77,278.03 798.45,277.54 797.18,277.0 795.94,276.41 794.75,275.77 793.6,275.09 792.5,274.36 791.46,273.59 790.47,272.78 789.54,271.93 788.66,271.05 787.85,270.13 787.11,269.18 786.43,268.21 785.83,267.21 785.29,266.18 784.82,265.14 784.43,264.08 784.11,263.01 783.87,261.92 783.71,260.83 783.62,259.73 783.6,258.63 783.67,257.54 783.81,256.44 784.03,255.35 784.32,254.28 784.68,253.21 785.13,252.16 785.64,251.13 786.22,250.13 786.88,249.14 787.6,248.18 788.39,247.26 789.24,246.36 790.15,245.5 791.12,244.68 792.15,243.89 793.23,243.15 794.36,242.45 795.54,241.8 796.76,241.19 798.03,240.63 799.33,240.13 800.66,239.67 802.02,239.27 803.41,238.92 804.83,238.62 806.26,238.39 807.7,238.2 809.16,238.08 810.62,238.01 812.09,238.0 813.55,238.05 815.01,238.16 816.46,238.32 817.9,238.54 819.32,238.81 820.72,239.14 822.09,239.53 823.43,239.97 824.75,240.46 826.02,241.0 827.26,241.59 828.45,242.23 829.6,242.91 830.7,243.64 831.74,244.41 832.73,245.22 833.66,246.07 825.18,251.78 824.62,251.29 824.03,250.82 823.41,250.37 822.75,249.94 822.07,249.54 821.35,249.17 820.61,248.82 819.84,248.5 819.05,248.21 818.24,247.95 817.41,247.72 816.57,247.52 815.71,247.36 814.84,247.22 813.97,247.12 813.08,247.05 812.19,247.01 811.3,247.0 810.41,247.03 809.53,247.09 808.65,247.18 807.78,247.31 806.91,247.46 806.07,247.65 805.23,247.87 804.42,248.12 803.62,248.4 802.84,248.71 802.09,249.05 801.37,249.42 800.67,249.81 800.01,250.22 799.37,250.66 798.77,251.13 798.2,251.61 797.67,252.12 797.18,252.64 796.73,253.18 796.32,253.74 795.95,254.31 795.63,254.9 795.34,255.49 795.1,256.1 794.91,256.71 794.77,257.33 794.66,257.95 794.61,258.58 794.6,259.21 794.64,259.84 794.73,260.46 794.86,261.08 795.04,261.7 795.26,262.31 795.53,262.91 795.84,263.5 796.19,264.07 796.59,264.63 797.03,265.18 797.51,265.71 798.02,266.22 798.58,266.71 799.17,267.18 799.79,267.63 800.45,268.06 801.13,268.46 801.85,268.83 802.59,269.18 803.36,269.5 804.15,269.79 804.96,270.05 805.79,270.28 806.63,270.48 807.49,270.64 808.36,270.78 809.23,270.88 810.12,270.95 811.01,270.99 811.9,271.0 812.79,270.97 813.67,270.91 814.55,270.82 815.42,270.69 816.29,270.54 817.13,270.35 817.97,270.13 818.78,269.88 819.58,269.6 820.36,269.29 821.11,268.95 821.83,268.58 822.53,268.19 823.19,267.78 823.83,267.34 824.43,266.87 825,266.39Z M913.2,239 960.2,239 960.2,248 942.2,248 942.2,279 931.2,279 931.2,248 913.2,248Z M1045.8,239 1057.8,239 1057.8,279 1045.8,279Z M1136.4,239 1149.4,239 1164.4,267 1179.4,239 1192.4,239 1170.4,279 1158.4,279Z M1274,239 1318,239 1318,248 1285,248 1285,254 1313,254 1313,263 1285,263 1285,270 1318,270 1318,279 1274,279Z"/><path fill="#BD102A" d="M405,43 441,43 460,61 479,43 515,43 472.5,79 447.5,79Z M1219,77 1251,40 1289,40 1246,77Z"/></svg></a></div></header>
+<main>
+<section class="hero">
+<p class="label">In development · Working title</p>
+<h1 class="game"><picture><source srcset="assets/eight16-logo.webp" type="image/webp"><img src="assets/eight16-logo.png" alt="Eight16" width="1120" height="548"></picture></h1>
+<div class="taglines">
+<p class="tagline">Every round is earned.</p>
+<p class="subline">A competitive <span class="nowrap">third-person</span> tactical shooter.</p>
+</div>
+<div class="cta">
+<a class="btn" href="https://x.com/BesirevicGames" rel="noopener">Follow @BesirevicGames</a>
+<p class="note">For development updates</p>
+</div>
+</section>
+</main>
+<footer><div class="foot">
+<span>© 2026 Beširević Interactive. All rights reserved.</span>
+<div class="links">
+<span>Press &amp; business: <a href="mailto:hello@besirevicinteractive.com">hello@besirevicinteractive.com</a></span>
+<a href="https://x.com/BesirevicGames" rel="noopener">X · @BesirevicGames</a>
+</div>
+</div></footer>
+<script>
+(function(){
+  var root=document.documentElement;
+  var seen=false; try{ seen=sessionStorage.getItem('bi-intro')==='1'; }catch(e){}
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var intro=document.getElementById('intro');
+  function finish(){ root.classList.remove('intro-on'); if(intro&&intro.parentNode) intro.parentNode.removeChild(intro); }
+  if(seen||reduce){ finish(); return; }
+  try{ sessionStorage.setItem('bi-intro','1'); }catch(e){}
+  var WORD=["M40,115 70,85 186,85 212,111 212,136 196,152 212,168 212,193 186,219 40,219Z M86,123 89,120 158,120 164,126 164,130 158,136 89,136 86,133Z M86,171 89,168 158,168 164,174 164,178 158,184 89,184 86,181Z", "M225,115 255,85 375,85 345,120 275,120 272,123 272,133 275,136 361,136 333.5,168 275,168 272,171 272,181 275,184 370,184 370,219 251,219 225,193Z", "M375,115 405,85 535,85 505,120 425,120 421,124 421,132 425,136 508,136 535,163 535,192 508,219 375,219 405,184 485,184 489,180 489,172 485,168 403,168 375,140Z", "M546,85 589,85 589,219 546,219Z", "M600,85 724,85 759,120 759,147 726,180 771,219 709,219 664,180 645,180 645,219 600,219Z M645,120 706,120 713,127 713,137 706,144 645,144Z", "M772,115 802,85 918,85 888,120 822,120 819,123 819,133 822,136 908,136 880.5,168 822,168 819,171 819,181 822,184 917,184 917,219 798,219 772,193Z", "M924,85 969,85 1015.5,176 1062,85 1107,85 1041,219 990,219Z", "M1112,85 1153,85 1153,219 1112,219Z", "M1164,121 1200,85 1318,85 1288,120 1221,120 1209,132 1209,170 1221,182 1290,182 1318,219 1197,219 1164,186Z"];
+  var NS='http://www.w3.org/2000/svg', g=document.getElementById('iletters');
+  var L=WORD.map(function(d){ var p=document.createElementNS(NS,'path'); p.setAttribute('d',d); p.setAttribute('fill-rule','evenodd'); p.setAttribute('opacity','0'); g.appendChild(p); return p; });
+  var gR=document.getElementById('gR'), gC=document.getElementById('gC'), inter=document.getElementById('iinter'),
+      hac=document.getElementById('ihacek'), acu=document.getElementById('iacute'), svg=document.getElementById('introLogo'), scan=intro.querySelector('.scan');
+  var T={start:.35, step:.13, gl:.26, inter:[1.65,2.0], hacek:[2.1,2.26], acute:[2.28,2.44], fly:2.95};
+  var TEAL='#4fe0dc', WHITE='#f5f5f7', t0=performance.now()/1000, done=false;
+  function rnd(t,k){ var n=Math.sin((Math.floor(t*30)+k*97.13)*12.9898)*43758.5453; return n-Math.floor(n); }
+  function cl(x){ return x<0?0:x>1?1:x; }
+  function frame(){
+    if(done) return;
+    var t=performance.now()/1000-t0, ghosts=[];
+    L.forEach(function(p,i){
+      var age=t-(T.start+i*T.step);
+      if(age<0){ p.setAttribute('opacity',0); return; }
+      if(age<T.gl){ p.setAttribute('opacity', rnd(t,i)>.28?1:0); p.setAttribute('fill', rnd(t,i+3)>.35?TEAL:WHITE);
+        p.setAttribute('transform','translate('+((rnd(t,i+7)-.5)*14)+' 0)'); ghosts.push(WORD[i]); return; }
+      p.setAttribute('opacity',1); p.setAttribute('fill',WHITE); p.removeAttribute('transform');
+    });
+    var gd=ghosts.join(' '); gR.setAttribute('d',gd); gC.setAttribute('d',gd);
+    var ga=gd&&rnd(t,40)>.3?.55:0; gR.setAttribute('opacity',ga); gC.setAttribute('opacity',ga);
+    gR.setAttribute('transform','translate('+(-6-rnd(t,41)*6)+' 0)'); gC.setAttribute('transform','translate('+(6+rnd(t,43)*6)+' 0)');
+    scan.style.opacity = t<T.inter[1] ? .5 : 0;
+    var ip=cl((t-T.inter[0])/(T.inter[1]-T.inter[0])); inter.setAttribute('opacity', ip<1 ? (rnd(t,60)>.3?ip:0) : 1);
+    var h=cl((t-T.hacek[0])/(T.hacek[1]-T.hacek[0])), a=cl((t-T.acute[0])/(T.acute[1]-T.acute[0]));
+    h=h*h*h; a=a*a*a;
+    hac.setAttribute('opacity',Math.min(1,h*3)); hac.setAttribute('transform','translate(0 '+(-46*(1-h))+')');
+    acu.setAttribute('opacity',Math.min(1,a*3)); acu.setAttribute('transform','translate('+(22*(1-a))+' '+(-46*(1-a))+')');
+    if(t>=T.fly){ fly(); return; }
+    requestAnimationFrame(frame);
+  }
+  function settle(){
+    L.forEach(function(p){ p.setAttribute('opacity',1); p.setAttribute('fill',WHITE); p.removeAttribute('transform'); });
+    gR.setAttribute('opacity',0); gC.setAttribute('opacity',0); inter.setAttribute('opacity',1); scan.style.opacity=0;
+    [hac,acu].forEach(function(e){ e.setAttribute('opacity',1); e.removeAttribute('transform'); });
+  }
+  function fly(){
+    if(done) return; done=true; settle();
+    var brand=document.querySelector('header .brand');
+    var a=svg.getBoundingClientRect(), b=brand.getBoundingClientRect();
+    var s=b.width/a.width, dx=b.left-a.left, dy=b.top-a.top;
+    ['header','main','footer'].forEach(function(q){ var el=document.querySelector(q); el.classList.add('reveal'); });
+    root.classList.remove('intro-on'); brand.style.opacity='0';
+    document.querySelector('main').style.opacity='0'; document.querySelector('footer').style.opacity='0'; document.querySelector('header').style.opacity='1';
+    var anim=svg.animate([{transform:'translate(0,0) scale(1)'},{transform:'translate('+dx+'px,'+dy+'px) scale('+s+')'}],{duration:750,easing:'cubic-bezier(.65,0,.25,1)',fill:'forwards'});
+    intro.animate([{backgroundColor:'rgba(0,0,0,1)'},{backgroundColor:'rgba(0,0,0,0)'}],{duration:750,easing:'ease',fill:'forwards'});
+    setTimeout(function(){ document.querySelector('main').style.opacity=''; document.querySelector('footer').style.opacity=''; },350);
+    anim.onfinish=function(){ brand.style.opacity=''; if(intro.parentNode) intro.parentNode.removeChild(intro); };
+  }
+  intro.addEventListener('click',function(){ if(!done) fly(); });
+  document.addEventListener('keydown',function(e){ if(!done&&(e.key==='Escape'||e.key===' '||e.key==='Enter')) fly(); });
+  requestAnimationFrame(frame);
+  setTimeout(function(){ if(!done) fly(); }, T.fly*1000+150);
+  setTimeout(function(){ if(intro.parentNode){ finish(); } var br=document.querySelector('header .brand'); if(br) br.style.opacity=''; }, 6000);
+})();
+</script>
+</body>
+</html>
